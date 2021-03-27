@@ -1,5 +1,6 @@
-from flask import Flask
+from fizzbuzz import app
 
 
 
-application = Flask(__name__)
+if __name__ == '__main__':
+    app.run(debug=True)

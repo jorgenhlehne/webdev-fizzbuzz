@@ -5,4 +5,4 @@ script:
 # unit test
 - python -m unittest
 # linting test
-- flake
+- flake8 --exclude .git,__pycache__,venv

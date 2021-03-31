@@ -68,14 +68,3 @@ def fizzbuzz_change():
     db.session.commit()
 
     return {'msg': 'changing fizzbuzz'}, 200
-
-
-@app.route('/server')
-def test_server():
-    temp = db.session.query(Variables).filter_by(id=1).first()
-    if temp:
-        print(temp)
-    else:
-        print("No row with id 1")
-    ret_msg = {'msg': 'Success'}
-    return ret_msg, 200

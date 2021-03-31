@@ -1,18 +1,18 @@
 
 
 def calculate_fizzbuzz(
-    count=100, fizzcount=3, buzzcount=5,
-    fizzname='Fizz', buzzname='Buzz'
+    count=100, fizz_count=3, buzz_count=5,
+    fizz_name='Fizz', buzz_name='Buzz'
 ):
     ret = [''] * count
     for i in range(1, count + 1):
-        if i % fizzcount == 0 and i % buzzcount == 0:
-            ret[i - 1] = fizzname + buzzname
+        if i % fizz_count == 0 and i % buzz_count == 0:
+            ret[i - 1] = fizz_name + buzz_name
         else:
-            if i % fizzcount == 0:
-                ret[i - 1] = fizzname
-            elif i % buzzcount == 0:
-                ret[i - 1] = buzzname
+            if i % fizz_count == 0:
+                ret[i - 1] = fizz_name
+            elif i % buzz_count == 0:
+                ret[i - 1] = buzz_name
             else:
                 ret[i - 1] = i
     return ret
